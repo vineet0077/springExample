@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'maven:3.5.4-jdk-10'
-    }
-
-  }
+  agent any
   stages {
     stage('Build') {
       steps {
