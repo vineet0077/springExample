@@ -14,6 +14,10 @@ pipeline {
     stage('Deploy') {
       steps {
         bat 'mvn package'
+      }
+    }
+    stage('report') {
+      steps {
         cucumber fileIncludePattern: '**/*.json', sortingMethod: 'ALPHABETICAL'
       }
     }
